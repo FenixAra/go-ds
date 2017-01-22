@@ -1,2 +1,2 @@
 # go-ds
-Datastructures implementation in golang
+Datastructures and algorithms implementation in golang

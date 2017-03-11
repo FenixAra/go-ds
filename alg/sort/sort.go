@@ -5,6 +5,7 @@ import "errors"
 const (
 	MERGE_SORT = iota
 	SELECTION_SORT
+	QUICK_SORT
 )
 
 var (
@@ -21,6 +22,8 @@ func NewSort(sort int) (Sort, error) {
 		return &mergeSort{}, nil
 	case SELECTION_SORT:
 		return &selectionSort{}, nil
+	case QUICK_SORT:
+		return &quickSort{}, nil
 	default:
 		return nil, ErrSortTypeUnsupported
 	}

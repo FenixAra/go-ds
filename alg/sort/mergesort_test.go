@@ -15,7 +15,7 @@ func TestMergeSort(t *testing.T) {
 }
 
 func BenchmarkMergeSort(b *testing.B) {
-	a := []int{4, 6, 1, 3, 2, 10}
+	a := helpers.RandomIntArray(1000)
 	mSort, _ := NewSort(MERGE_SORT)
 
 	for n := 0; n < b.N; n++ {

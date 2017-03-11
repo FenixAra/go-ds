@@ -3,7 +3,7 @@ package sort
 type mergeSort struct {
 }
 
-// Sort using merge sort
+// Sorting an integer array using merge sort
 func (m *mergeSort) Sort(a []int) []int {
 	return mSort(a, 0, len(a)-1)
 }

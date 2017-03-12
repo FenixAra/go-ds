@@ -13,7 +13,7 @@ func (s *selectionSort) Sort(a []int) []int {
 
 		j += i + 1
 		if a[i] > a[j] {
-			a = swap(a, i, j)
+			swap(&a[i], &a[j])
 		}
 	}
 	return a
@@ -35,9 +35,8 @@ func minOfArray(a []int) int {
 	return pos
 }
 
-func swap(a []int, i, j int) []int {
-	t := a[i]
-	a[i] = a[j]
-	a[j] = t
-	return a
+func swap(a *int, b *int) {
+	t := *a
+	*a = *b
+	*b = t
 }

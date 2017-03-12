@@ -26,10 +26,10 @@ func partition(a []int, l, h int) ([]int, int) {
 	for j := l; j < h; j++ {
 		if a[j] < pivot {
 			i++
-			a = swap(a, i, j)
+			swap(&a[i], &a[j])
 		}
 	}
 
-	a = swap(a, i+1, h)
+	swap(&a[i+1], &a[h])
 	return a, i + 1
 }
